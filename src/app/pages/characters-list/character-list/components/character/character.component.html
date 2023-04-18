@@ -1,0 +1,38 @@
+<div
+ *ngIf="characterToShow"
+  class="character">
+
+    <img
+     class="character__image"
+      [src]="characterToShow.image">
+
+    <div
+     class="character__info">
+
+        <p class="character__text" >{{characterToShow.id}}</p>
+        <p class="character__text" >{{characterToShow.name}}</p>
+      
+        
+    </div>
+
+
+
+    <div 
+    class="character__buttons">
+
+        <button
+         class="character__button character__button--remove"
+         (click)="removeCharacter()">Remove</button>
+
+         <button
+          class="character__button "
+         (click)="navigateToEditCharacter(characterToShow.id)"
+         >Editar </button>
+
+        <button
+         class="character__button"
+         (click)="navigateToDetail(characterToShow.id)"> Ver mas informacion </button>
+
+        
+    </div>
+</div>

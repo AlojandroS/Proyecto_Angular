@@ -1,0 +1,12 @@
+<div>
+
+<a
+*ngFor ="let link of headerLinksElements"
+ [routerLink]="[link.url]"
+  class="link"
+   routerLinkActive = "link--active"
+  >{{link.content}}</a>
+
+
+</div>
+

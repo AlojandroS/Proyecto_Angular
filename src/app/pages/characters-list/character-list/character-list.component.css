@@ -1,0 +1,8 @@
+.character-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.character-list__character {
+  margin: 16px;
+  width: 250px;
+}/*# sourceMappingURL=character-list.component.css.map */

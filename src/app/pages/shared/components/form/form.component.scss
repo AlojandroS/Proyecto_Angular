@@ -1,0 +1,22 @@
+.control {
+
+    margin-bottom: 10px;
+
+    &__error{
+        color:red
+    }
+    &__success{
+
+       color: black
+    }
+}
+
+.form-container {
+    display: flex;
+    &__img{
+        width: 400px;
+        height: 400px;
+        object-fit: cover;
+        margin-left: 40px;
+    }
+}

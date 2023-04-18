@@ -1,0 +1,17 @@
+.character {
+  border: 1px solid grey;
+  padding: 16px;
+}
+.character__text {
+  margin-bottom: 16px;
+  
+}
+.character__button {
+  border: none;
+  padding: 8px;
+}
+.character__button--remove {
+  background-color: red;
+  font-weight: bold;
+  color: white;
+}/*# sourceMappingURL=character.component.css.map */

@@ -1,0 +1,31 @@
+footer {
+    background-color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    color: white;
+  
+    .social-icons {
+      font-size: 1.5rem;
+  
+      a {
+        margin-right: 1.5rem;
+  
+        &:last-of-type {
+          margin-right: 0;
+        }
+  
+        i {
+          transition: all 0.2s ease-in-out;
+          &:hover {
+            transform: scale(1.2);
+          }
+        }
+      }
+    }
+  
+    .credit {
+      font-size: 0.9rem;
+    }
+  }

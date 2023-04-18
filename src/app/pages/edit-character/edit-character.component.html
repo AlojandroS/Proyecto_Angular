@@ -1,0 +1,13 @@
+<div
+*ngIf = "character"
+>
+
+<p>Puedes modificar tu personaje {{character.name}}</p>
+
+<app-form
+[character] = ""
+[isEditMode] = true
+>
+</app-form>
+
+</div>

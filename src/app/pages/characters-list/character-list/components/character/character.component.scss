@@ -1,0 +1,53 @@
+.character {
+    border: 2px solid grey;
+    box-shadow: 6px 3px 5px 7px lightsteelblue;
+    margin-bottom: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+
+    &__info {
+        padding: 8px;
+    }
+
+    &__image {
+        width: 247px;
+        height: 200px;
+        object-fit: cover;
+        border-bottom: 0px solid black;
+    }
+
+    &__text {
+        margin-bottom: 8px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    &__color{
+        margin-left: 10px;
+        width: 20px;
+        height: 20px;
+        border-radius: 5px;
+        border: 1px solid blue
+    }
+
+    &__buttons {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px;
+    }
+
+    &__button {
+        border: none;
+        padding: 8px;
+        margin: 10px 1px;
+        background-color: lightblue;
+
+        &--remove {
+            background-color: slateblue;
+            font-weight: bold;
+            color: white
+        }
+
+    }
+}

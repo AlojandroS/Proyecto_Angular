@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl, Validators} from '@angular/forms'
-import { charactersData } from 'src/app/core/character.data';
+
 import { Router } from '@angular/router';
 import { CharacterI } from 'src/app/core/services/character/models/character.interface';
 import { CharacterService } from 'src/app/core/services/character/character.service';

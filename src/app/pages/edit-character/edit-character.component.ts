@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { charactersData } from 'src/app/core/character.data';
 import { CharacterI } from 'src/app/core/services/character/models/character.interface';
+import { CharacterService } from 'src/app/core/services/character/character.service';
 
 @Component({
   selector: 'app-edit-character',
@@ -12,10 +12,15 @@ export class EditCharacterComponent {
   
   public character?: CharacterI
 
-  constructor(private activatedRoute: ActivatedRoute) {
+  constructor(
+    private activatedRoute: ActivatedRoute,
+    private characterService: CharacterService
+  ) {
     this.activatedRoute.params.subscribe((params) => {
       const characterId = params['id'];
-      this.character = charactersData.find((character) => character.id === characterId)
-    })
+      this.characterService.getCharacterById(characterId).subscribe((character) => {
+        this.character = character;
+      });
+    });
   }
 }

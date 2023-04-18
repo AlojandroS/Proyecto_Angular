@@ -16,10 +16,11 @@ export class ApiCharacterService {
   ) { }
 
 
+ 
   public getApiCharacters(): Observable<CharacterI[]> {
-    return this.http.get<CharacterI[]>(`${API_URL}/character/`)
-    
-    
+    return this.http.get<any>(`${API_URL}/character/`).pipe(
+      map(response => response.results)
+    );
   }
 
   public getApiCharacterById(id:string): Observable<CharacterI> {

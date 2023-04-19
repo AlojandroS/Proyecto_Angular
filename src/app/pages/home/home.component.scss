@@ -1,8 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Pixels');
+
+
+
 .heading {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    // font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Rubik Pixels', sans-serif;
     font-size: 4rem;
-    color: pink;
-    text-shadow: 2px 2px blue;
+    color: rgb(223, 4, 139);
+    text-shadow: 2px 2px rgba(0, 255, 157, 0.637);
+    text-align: center;
+    
   }
   
   .neon-text {

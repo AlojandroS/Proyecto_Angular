@@ -5,8 +5,8 @@
   justify-content: center;
   align-items: center;
   padding: 5px;
-  background-color: rgba(211, 218, 223, 0.3);
-
+  // background-color: rgba(211, 218, 223, 0.3);
+ background-color: rgba(211, 218, 223, 0.158);
   &__logo {
     position: absolute;
     left: 0;
@@ -41,7 +41,7 @@
     //   font-weight: bold;
       cursor: pointer;
       transition: all 0.5s ease;
-      background-color: rgba(25, 39, 49, 0.718);
+      background-color: rgba(25, 39, 49, 0.829);
       color: #ffffff;
       text-shadow: 1px 0px 4px white;
 

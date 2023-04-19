@@ -87,9 +87,8 @@ export class FormComponent implements OnInit {
         Validators.pattern(onlyLetter),
       ]),
       image: new FormControl(this.character?.image || '', [
-        Validators.required
-,
-      ]),
+        Validators.required]),
+
       status: new FormControl(this.character?.status || '', [
         Validators.required,
         Validators.pattern(onlyLetter),

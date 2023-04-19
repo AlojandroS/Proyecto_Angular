@@ -31,13 +31,14 @@ export class ApiCharacterService {
     return this.http.post<CharacterI>(`${API_URL}/character`, body)
   }
 
-  public editApiCharacter (body: CharacterI, id: string): Observable<CharacterI>{
+  public editApiCharacter (body: CharacterI, id:string): Observable<CharacterI>{
     return this.http.put<CharacterI>(`${API_URL}/character/${id}`, body)
   }
 
-public deleteApicharacter(id:string): Observable<CharacterI>{
-  return this.http.delete<CharacterI>(`${API_URL}/character/${id}`)
+  public deleteApicharacter(id:string): Observable<CharacterI>{
+    return this.http.delete<CharacterI>(`${API_URL}/character/${id}`)
+  }
   
 }
 
-  }
+  

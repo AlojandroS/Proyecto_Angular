@@ -5,17 +5,23 @@ import { HeaderLInk } from "../models/header.model";
 export const headerLinks: HeaderLInk[] = [
 {
 url: 'home',
-content: 'Home'
+content: 'HOME'
 },
 
 {
     url: 'character-list',
-    content: 'Listado de personajes'
+    content: 'LISTA PERSONAJES'
 },
 
 {
     url: 'create-character',
-    content: 'Crear personaje'
+    content: 'CREAR PERSONAJE'
+},
+
+{
+    url: 'about',
+    content: 'ABOUT'
 }
+
 
 ]

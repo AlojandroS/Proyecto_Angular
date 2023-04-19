@@ -28,10 +28,11 @@ export class CharacterListComponent implements OnInit {
   }
   
 
-  public removeCharacter(id: string) {
-    this.charactersService.deleteCharacter(id).subscribe(() => this.getCharacters());
-  }
-       
+  public removeCharacter(id:string) {
+    this.charactersService.deleteCharacter(id).subscribe(() => {
+      this.getCharacters();
+    });
+  }    
 
   public filterCharacters(){
     this.characters = this.originalCharacters?.filter(character => {

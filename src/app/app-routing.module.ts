@@ -28,6 +28,12 @@ const routes: Routes = [
    
    },
    {
+   path: 'about',
+   pathMatch: "full",
+   loadChildren: () => import('./pages/about/about.module').then(m=> m.AboutModule)
+  
+  },
+   {
    path: 'create-character',
    pathMatch: "full",
    loadChildren: () => import('./pages/create-character/create-character.module').then(m=> m.CreateCharacterModule)

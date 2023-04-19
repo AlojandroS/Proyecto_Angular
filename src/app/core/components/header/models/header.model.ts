@@ -3,4 +3,4 @@ export interface HeaderLInk {
     content: string;
 }
 
-export type HeaderUrl = 'home' | 'character-list' | 'create-character'
+export type HeaderUrl = 'home' | 'character-list' | 'create-character' | 'about'

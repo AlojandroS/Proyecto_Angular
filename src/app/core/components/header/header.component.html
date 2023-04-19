@@ -1,12 +1,8 @@
-<div>
-
-<a
-*ngFor ="let link of headerLinksElements"
- [routerLink]="[link.url]"
-  class="link"
-   routerLinkActive = "link--active"
-  >{{link.content}}</a>
-
-
+<div class="header">
+  <div class="header__logo">
+    <a href="http://localhost:4200/home" target="_blank"><img src="../../../../assets/images/logo-header.png" alt="logo-header"></a>
+  </div>
+  <ul class="header__lista">
+    <li class="header__lista-boton" *ngFor="let link of headerLinksElements" [routerLink]="[link.url]" routerLinkActive="link--active">{{link.content}}</li>
+  </ul>
 </div>
-

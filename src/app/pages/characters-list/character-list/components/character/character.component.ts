@@ -22,14 +22,14 @@ constructor(
 
  
  public removeCharacter(){
-this.onRemoveCharacter.emit();  
- }
+  this.onRemoveCharacter.emit();  
+   }
 
- public navigateToDetail(id:string){
+public navigateToDetail(id:string): void {
   this.router.navigate(['character-detail', id]);
- }
- 
- public navigateToEditCharacter(id:string){
+}
+
+public navigateToEditCharacter(id:string): void {
   this.router.navigate(['edit-character', id]);
- }
+}
 }

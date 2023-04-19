@@ -1,7 +1,7 @@
 export interface CharacterI {
    
 
-        id: string,
+        id:string,
         name: string,
         status: string,
         species: string,
@@ -11,30 +11,4 @@ export interface CharacterI {
       
   
 }
-
-// export interface ApiCharacterI{
-    
-
-//     id: string,
-//     name: string,
-//     status: string,
-//     species: string,
-//     gender: string,
-//     image: string
-  
-// }
-
-// export interface CharacterRequestBody{
-//     id: string,
-//     name: string,
-//     status: string,
-//     species: string,
-//     gender: string,
-//     image: string
-    
-  
-// }
-
-
-
 

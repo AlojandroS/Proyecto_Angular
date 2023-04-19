@@ -1,6 +1,6 @@
 <div class="header">
   <div class="header__logo">
-    <a href="https://rickmortyangular-three.vercel.app/home" target="_blank"><img src="../../../../assets/images/logo-header.png" alt="logo-header"></a>
+    <a href="https://rickmortyangular-three.vercel.app/home"><img src="../../../../assets/images/logo-header.png" alt="logo-header"></a>
   </div>
   <ul class="header__lista">
     <li class="header__lista-boton" *ngFor="let link of headerLinksElements" [routerLink]="[link.url]" routerLinkActive="link--active">{{link.content}}</li>

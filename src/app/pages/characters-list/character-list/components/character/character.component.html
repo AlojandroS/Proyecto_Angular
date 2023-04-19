@@ -20,18 +20,20 @@
     <div 
     class="character__buttons">
 
-        <button
-         class="character__button character__button--remove"
-         (click)="removeCharacter()">Remove</button>
-
-         <button
+    <button
           class="character__button "
          (click)="navigateToEditCharacter(characterToShow.id)"
          >Editar </button>
 
         <button
+         class="character__button character__button--remove"
+         (click)="removeCharacter()">Remove</button>
+
+         
+
+        <button
          class="character__button"
-         (click)="navigateToDetail(characterToShow.id)"> Ver mas informacion </button>
+         (click)="navigateToDetail(characterToShow.id)"> + infor </button>
 
         
     </div>

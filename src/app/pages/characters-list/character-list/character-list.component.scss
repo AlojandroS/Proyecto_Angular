@@ -1,9 +1,36 @@
-.character-list{
+.search {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+  
+    &__input {
+      background-color: #4a4c4f;
+      border: none;
+      border-radius: 8px;
+      color: #eff0ed;
+      font-size: 16px;
+      padding: 10px;
+      width: 50%;
+      max-width: 300px;
+  
+      &::placeholder {
+        color: #bbb;
+        font-style: italic;
+      }
+    }
+  }
+  
+  .character-list {
     display: flex;
     flex-wrap: wrap;
-    
-    &__character{
-        margin:16px;
-        width: 250px;
+    justify-content: space-between;
+  
+    &__character {
+      margin: 16px;
+      width: calc(33.33% - 32px);
+      max-width: 250px;
+      background-color: #e1eaee;
+      border-radius: 4px;
+      padding: 16px;
     }
-}
+  }

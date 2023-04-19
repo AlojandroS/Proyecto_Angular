@@ -1,23 +1,18 @@
-
-<input 
-class="character-list__search"
-[(ngModel)]="inputValue"
- (input) = "filterCharacters()"
->
-
-
-<div
-class="character-list"
-*ngIf="characters">
-
-<app-character
- class="character-list__character"
- *ngFor = "let character of characters"
- [characterToShow] = "character"
- (onRemoveCharacter) = "removeCharacter(character.id)"
- >
-</app-character>
-
-</div>
-
+<div class="search">
+    <input 
+      class="search__input"
+      [(ngModel)]="inputValue"
+      placeholder="Buscar..."
+      (input)="filterCharacters()"
+    >
+  </div>
+  
+  <div class="character-list" *ngIf="characters">
+    <app-character
+      class="character-list__character"
+      *ngFor="let character of characters"
+      [characterToShow]="character"
+      (onRemoveCharacter)="removeCharacter(character.id)">
+    </app-character>
+  </div>
 

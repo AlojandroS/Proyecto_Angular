@@ -1,22 +1,102 @@
-.control {
-
-    margin-bottom: 10px;
-
-    &__error{
-        color:red
-    }
-    &__success{
-
-       color: black
-    }
-}
-
 .form-container {
     display: flex;
-    &__img{
-        width: 400px;
-        height: 400px;
-        object-fit: cover;
-        margin-left: 40px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    padding: 70px;
+    background-color: #000000de;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(38, 143, 228, 0.884);
+    position: relative;
+  }
+  .control {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+  
+  .control input {
+    background-color: #dbeaf1;
+    border: none;
+    border-radius: 5px;
+    color: #110404;
+    font-size: 14px;
+    padding: 10px;
+      }
+  
+  .control input:focus {
+    outline: none;
+    box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.2);
+  }
+
+  .control input:hover {
+    background-color: #38d77f;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .control__error {
+    color: #ff3f34;
+    font-size: 14px;
+    margin-top: 5px;
+    animation: shake 0.4s ease-in-out infinite;
+  }
+  
+  @keyframes shake {
+    0% {
+      transform: translateX(0);
     }
-}
+    25% {
+      transform: translateX(-3px);
+    }
+    50% {
+      transform: translateX(0);
+    }
+    75% {
+      transform: translateX(3px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  .control__success {
+    color: #00b894;;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+
+  .form-container__img {
+    position: center;
+    top: 0;
+    right:0 ;
+    width: 300px;
+    height: auto;
+       
+  }
+  .button-form {
+    display: inline-block;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    background-color: #25244a;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+   
+  }
+  
+  .button-form:hover {
+    background-color: #1abc9c;
+    color: #fff;
+    transform: translateY(-2px);
+   
+  }
+  
+  .button-form:active {
+    background-color: #16a085;
+    color: #fff;
+    transform: translateY(-1px);
+    
+  }

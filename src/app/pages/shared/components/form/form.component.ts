@@ -45,6 +45,7 @@ export class FormComponent implements OnInit {
         this.createCharacter();
       }
       this.characterForm?.reset();
+      this.hasSuccess = true;
     } else {
       this.hasFormError = true;
     }

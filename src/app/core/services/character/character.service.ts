@@ -23,7 +23,7 @@ export class CharacterService {
     );
   }
 
-  public getCharacterById(id:string): Observable<CharacterI> {
+  public getCharacterById(id:number): Observable<CharacterI> {
     return this.apiCharactersService.getApiCharacterById(id);
   }
 
@@ -31,12 +31,12 @@ export class CharacterService {
     return this.apiCharactersService.createApiCharacter(body);
   }
 
-  public editCharacter(body: CharacterI, id:string): Observable<CharacterI> {
+  public editCharacter(body: CharacterI, id:number): Observable<CharacterI> {
     return this.apiCharactersService.editApiCharacter(body, id);
   }
 
-  public deleteCharacter(id:string): Observable<CharacterI> {
-    return this.apiCharactersService.deleteApicharacter(id);
+  public deleteCharacter(id:number): Observable<CharacterI> {
+    return this.apiCharactersService.deleteApiCharacter(id);
   }
 }
 

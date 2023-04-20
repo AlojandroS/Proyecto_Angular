@@ -23,7 +23,7 @@ export class ApiCharacterService {
     );
   }
 
-  public getApiCharacterById(id:string): Observable<CharacterI> {
+  public getApiCharacterById(id:number): Observable<CharacterI> {
     return this.http.get<CharacterI>(`${API_URL}/character/${id}`)
   }
 
@@ -31,14 +31,17 @@ export class ApiCharacterService {
     return this.http.post<CharacterI>(`${API_URL}/character`, body)
   }
 
-  public editApiCharacter (body: CharacterI, id:string): Observable<CharacterI>{
+  public editApiCharacter (body: CharacterI, id:number): Observable<CharacterI>{
     return this.http.put<CharacterI>(`${API_URL}/character/${id}`, body)
   }
 
-  public deleteApicharacter(id:string): Observable<CharacterI>{
-    return this.http.delete<CharacterI>(`${API_URL}/character/${id}`)
+//   public deleteApicharacter(id:number): Observable<CharacterI>{
+//     return this.http.delete<CharacterI>(`${API_URL}/character/${id}`)
+    
+// }
+public deleteApiCharacter(id: number): Observable<CharacterI> {
+  return this.http.delete<any>(`${API_URL}/character/${id}`).pipe(
+    map(response => response))
   }
-  
-}
 
-  
+}

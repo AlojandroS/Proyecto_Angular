@@ -9,6 +9,7 @@ import { CharacterI } from 'src/app/core/services/character/models/character.int
   styleUrls: ['./character-detail.component.scss'],
 })
 export class CharacterDetailComponent {
+  
   public character?: CharacterI;
 
   constructor(

@@ -25,11 +25,11 @@ constructor(
   this.onRemoveCharacter.emit()  
    }
 
-public navigateToDetail(id:string): void {
+public navigateToDetail(id:number): void {
   this.router.navigate(['character-detail', id]);
 }
 
-public navigateToEditCharacter(id:string): void {
+public navigateToEditCharacter(id:number): void {
   this.router.navigate(['edit-character', id]);
 }
 }

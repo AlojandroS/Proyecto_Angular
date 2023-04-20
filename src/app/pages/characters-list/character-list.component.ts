@@ -28,7 +28,7 @@ export class CharacterListComponent implements OnInit {
   }
   
 
-  public removeCharacter(id:string) {
+  public removeCharacter(id:number) {
     this.charactersService.deleteCharacter(id).subscribe(() => {
       this.getCharacters();
     });
@@ -43,6 +43,7 @@ export class CharacterListComponent implements OnInit {
 private getCharacters() {
   this.charactersService.getCharacters().subscribe((characters: CharacterI[]) => {
     this.characters = characters;
+    this.originalCharacters = characters;
   });
 }
 

@@ -1,72 +1,58 @@
 <div class="form-container">
 
-<form *ngIf=" characterForm" [formGroup]="characterForm" (submit)="handleCharacter()">
-
-    <div class="control">
-        <input 
-        placeholder="Nombre"
-         formControlName="name">
-        <div *ngIf="!characterForm.get('name')?.valid && characterForm.get('name')?.touched"
-            class="control__error">
-            <p  *ngIf="characterForm.get('name')?.errors?.['required']">El campo esta requerido</p>
-            <p *ngIf="characterForm.get('name')?.errors?.['pattern']">Solo se aceptan letras</p>
+    <form *ngIf="characterForm" [formGroup]="characterForm" (submit)="handleCharacter()">
+  
+      <div class="control">
+        <input placeholder="Nombre" formControlName="name">
+        <div *ngIf="!characterForm.get('name')?.valid && characterForm.get('name')?.touched" class="control__error">
+          <p *ngIf="characterForm.get('name')?.errors?.['required']">El campo esta requerido</p>
+          <p *ngIf="characterForm.get('name')?.errors?.['pattern']">Solo se aceptan letras</p>
         </div>
-    </div>
-
-
-    <div class="control">
-        <input placeholder="Url de la imagen"
-         formControlName="image">
+      </div>
+  
+      <div class="control">
+        <input placeholder="Url de la imagen" formControlName="image">
         <div *ngIf="!characterForm.get('image')?.valid && characterForm.get('image')?.touched" class="control__error">
-            
-            <p *ngIf="characterForm.get('image')?.errors?.['required']">El campo esta requerido</p>
-           
+          <p *ngIf="characterForm.get('image')?.errors?.['required']">El campo esta requerido</p>
         </div>
-    </div>
-
-    <div class="control">
-        <input placeholder="Status del personaje"
-         formControlName="status">
+      </div>
+  
+      <div class="control">
+        <input placeholder="Status del personaje" formControlName="status">
         <div *ngIf="!characterForm.get('status')?.valid && characterForm.get('status')?.touched" class="control__error">
-
-            <p *ngIf="characterForm.get('status')?.errors?.['required']">El campo esta requerido</p>
-            <p *ngIf="characterForm.get('status')?.errors?.['pattern']">Solo se aceptan letras</p>
-            
+          <p *ngIf="characterForm.get('status')?.errors?.['required']">El campo esta requerido</p>
+          <p *ngIf="characterForm.get('status')?.errors?.['pattern']">Solo se aceptan letras</p>
         </div>
-    </div>
-
-    <div class="control">
-        <input placeholder="Especie del personaje"
-         formControlName="species">
+      </div>
+  
+      <div class="control">
+        <input placeholder="Especie del personaje" formControlName="species">
         <div *ngIf="!characterForm.get('species')?.valid && characterForm.get('species')?.touched" class="control__error">
-
-        <div *ngIf="!characterForm.get('species')?.valid && characterForm.get('species')?.touched" class="control__error">
-            
-            <p *ngIf="characterForm.get('species')?.errors?.['required']">El campo esta requerido</p>
-            <p *ngIf="characterForm.get('species')?.errors?.['pattern']">Solo se aceptan letras</p>
+          <p *ngIf="characterForm.get('species')?.errors?.['required']">El campo esta requerido</p>
+          <p *ngIf="characterForm.get('species')?.errors?.['pattern']">Solo se aceptan letras</p>
         </div>
-    </div>
-
-    <div class="control">
-        <input placeholder="genero del personaje"
-         formControlName="gender">
+      </div>
+  
+      <div class="control">
+        <input placeholder="Genero del personaje" formControlName="gender">
         <div *ngIf="!characterForm.get('gender')?.valid && characterForm.get('gender')?.touched" class="control__error">
-
-        <div *ngIf="!characterForm.get('gender')?.valid && characterForm.get('gender')?.touched" class="control__error">
-            
-            <p *ngIf="characterForm.get('gender')?.errors?.['required']">El campo esta requerido</p>
-            <p *ngIf="characterForm.get('gender')?.errors?.['pattern']">Solo se aceptan letras</p>
+          <p *ngIf="characterForm.get('gender')?.errors?.['required']">El campo esta requerido</p>
+          <p *ngIf="characterForm.get('gender')?.errors?.['pattern']">Solo se aceptan letras</p>
         </div>
+      </div>
+  
+      <button class="button-form" type="submit">{{isEditMode ? 'Editar' : 'Crear'}}</button>
+      <div *ngIf="hasFormError" class="control__error">Hay errores en el formulario, revisalo</div>
+      <div *ngIf="hasSuccess" class="control__success">
+        Personaje creado con exito, puedes verlo en la <a [routerLink]="['../character-list']">lista</a>
+      </div>
+  
+      <div class="form-container__img" >
+      <img [src]="imgSrc">
     </div>
 
-<button 
-type="submit">{{isEditMode? 'Editar': 'Crear'}}</button>
-<div *ngIf="hasFormError" class="control__error">Hay errores en el formulario, revisalo</div>
-<div *ngIf="hasSuccess" class="control__success">Personaje creado con exito, puedes verlo en la
-     <a [routerLink] = "['../character-list']">lista</a>
-    </div>
 
+  
 
-<img class="form-container__img" [src]="imgSrc">
-
-</div>
+  
+    

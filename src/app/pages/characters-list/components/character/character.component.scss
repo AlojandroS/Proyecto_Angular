@@ -1,9 +1,12 @@
+// @import url('https://fonts.googleapis.com/css?family=Kanit');
+
+@import url('https://fonts.googleapis.com/css?family=DynaPuff');
+
 .character {
     border: 1px solid rgb(17, 14, 14);
     box-shadow: 2px 2px 2px 2px rgb(198, 222, 176);
     background-color: white;
     // margin-bottom: px;
-    font-family: Arial, Helvetica, sans-serif;
     cursor: pointer;
 
     &__info {
@@ -22,6 +25,9 @@
         text-overflow: ellipsis;
         overflow: hidden;
         white-space: nowrap;
+        font-family: 'DynaPuff', sans-serif;
+        
+
     }
    
     &__buttons {

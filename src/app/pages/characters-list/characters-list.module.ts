@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CharacterListComponent } from './character-list/character-list.component';
-import { CharacterComponent } from './character-list/components/character/character.component';
+import { CharacterListComponent } from './character-list.component';
+import { CharacterComponent } from './components/character/character.component';
 import { FormsModule } from '@angular/forms';
-import { UppercaseDirective } from './character-list/directives/uppercase.directive';
-import { CharacterListRoutingModule } from './character-list/character-list-routing.module';
+import { UppercaseDirective } from './directives/uppercase.directive';
+import { CharacterListRoutingModule } from './character-list-routing.module';
 
 
 

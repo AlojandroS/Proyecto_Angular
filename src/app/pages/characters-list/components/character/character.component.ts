@@ -22,7 +22,7 @@ constructor(
 
  
  public removeCharacter(){
-  this.onRemoveCharacter.emit();  
+  this.onRemoveCharacter.emit()  
    }
 
 public navigateToDetail(id:string): void {

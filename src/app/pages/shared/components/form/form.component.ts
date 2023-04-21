@@ -75,7 +75,7 @@ export class FormComponent implements OnInit {
 
   private initForm() {
 
-    const onlyLetter = new RegExp('^[A-Z]+$', 'i');
+    const onlyLetter = new RegExp('^[ a-zA-ZñÑáéíóúÁÉÍÓÚ]+$');
     
 
     if(this.character) {

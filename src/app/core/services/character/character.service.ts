@@ -23,6 +23,8 @@ export class CharacterService {
     );
   }
 
+
+
   public getCharacterById(id:number): Observable<CharacterI> {
     return this.apiCharactersService.getApiCharacterById(id);
   }

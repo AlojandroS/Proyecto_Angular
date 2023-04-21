@@ -18,7 +18,7 @@ export class ApiCharacterService {
 
  
   public getApiCharacters(): Observable<CharacterI[]> {
-    return this.http.get<any>(`${API_URL}/character/?page=2`).pipe(
+    return this.http.get<any>(`${API_URL}/character/?page=1`).pipe(
       map(response => response.results)
     );
   }

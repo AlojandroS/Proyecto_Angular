@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable, map } from 'rxjs';
 import { CharacterI} from '../models/character.interface';
 
-const API_URL = 'https://rickandmortyapi.com/api'
+const API_URL = 'https://proyecto-rick-y-morty-default-rtdb.firebaseio.com/results.json'
 
 
 @Injectable({
@@ -18,10 +18,8 @@ export class ApiCharacterService {
 
  
   public getApiCharacters(): Observable<CharacterI[]> {
-    return this.http.get<any>(`${API_URL}/character/?page=1`).pipe(
-      map(response => response.results)
-    );
-  }
+    return this.http.get<CharacterI[]>('https://proyecto-rick-y-morty-default-rtdb.firebaseio.com/results.json')
+    }
 
   public getApiCharacterById(id:number): Observable<CharacterI> {
     return this.http.get<CharacterI>(`${API_URL}/character/${id}`)
@@ -35,10 +33,7 @@ export class ApiCharacterService {
     return this.http.put<CharacterI>(`${API_URL}/character/${id}`, body)
   }
 
-//   public deleteApicharacter(id:number): Observable<CharacterI>{
-//     return this.http.delete<CharacterI>(`${API_URL}/character/${id}`)
-    
-// }
+
 public deleteApiCharacter(id: number): Observable<CharacterI> {
   return this.http.delete<any>(`${API_URL}/character/${id}`).pipe(
     map(response => response))

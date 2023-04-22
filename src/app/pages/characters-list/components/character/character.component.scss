@@ -6,7 +6,7 @@
     border: 1px solid rgb(17, 14, 14);
     box-shadow: 2px 2px 2px 2px rgb(198, 222, 176);
     background-color: white;
-    // margin-bottom: px;
+
     cursor: pointer;
 
     &__info {
@@ -14,12 +14,11 @@
     }
 
     &__image {
-        // width: 248px;
+
         width: 100%;
         height: 75%;
-        // height: 350px;
         object-fit: cover;
-        // border-bottom: 0px solid black;
+
     }
 
     &__text {
@@ -31,13 +30,13 @@
         font-size: 12px;
 
     }
-   
+
     &__buttons {
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 4px;
-        
+
     }
 
     &__button {
@@ -51,8 +50,8 @@
             background-color: rgb(205, 94, 90);
             font-weight: bold;
             color: white;
-            
-            
+
+
         }
 
     }
